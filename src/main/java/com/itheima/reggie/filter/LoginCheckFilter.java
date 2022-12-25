@@ -49,7 +49,7 @@ public class LoginCheckFilter implements Filter {
             return;
         }
 
-        // 判断手机端登录状态，如果已登录，则直接放行
+        // 判断手机端登录状态，如果已登录，则直接放行，为什么session是id见标注2
         if (request.getSession().getAttribute("user") !=null) {
             Object user1 = request.getSession().getAttribute("user");
             Long userId = (Long) request.getSession().getAttribute("user");
