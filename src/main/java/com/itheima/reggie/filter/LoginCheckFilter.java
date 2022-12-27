@@ -60,8 +60,6 @@ public class LoginCheckFilter implements Filter {
 
         //判断未登录则返回未登录结果，通过输出流方式向客户端响应数据
         response.getWriter().write(JSON.toJSONString(R.error("NOTLOGIN")));
-
-
     }
     public boolean check(String[] urls,String requestUrl){
         for (String url : urls) {
